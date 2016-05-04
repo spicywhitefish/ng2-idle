@@ -30,7 +30,7 @@ System.config({
 Promise.all([
   System.import('angular2/src/platform/browser/browser_adapter'),
   System.import('angular2/platform/testing/browser'),
-  System.import('angular2/testing')
+  System.import('angular2/core/testing')
 ]).then(function (modules) {
   var browser_adapter = modules[0];
   var providers = modules[1];

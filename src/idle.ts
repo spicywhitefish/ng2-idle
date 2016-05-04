@@ -1,4 +1,4 @@
-import {Injectable, EventEmitter, OnDestroy, Optional} from 'angular2/core';
+import {Injectable, EventEmitter, OnDestroy, Optional} from '@angular/core';
 
 import {InterruptSource} from './interruptsource';
 import {InterruptArgs} from './interruptargs';
@@ -41,11 +41,11 @@ export class Idle implements OnDestroy {
   private keepaliveEnabled: boolean = false;
   private keepaliveSvc: KeepaliveSvc;
 
-  public onIdleStart: EventEmitter<any> = new EventEmitter;
-  public onIdleEnd: EventEmitter<any> = new EventEmitter;
-  public onTimeoutWarning: EventEmitter<number> = new EventEmitter;
-  public onTimeout: EventEmitter<number> = new EventEmitter;
-  public onInterrupt: EventEmitter<any> = new EventEmitter;
+  public onIdleStart = new EventEmitter<any>();
+  public onIdleEnd = new EventEmitter<any>();
+  public onTimeoutWarning = new EventEmitter<number>();
+  public onTimeout = new EventEmitter<number>();
+  public onInterrupt = new EventEmitter<any>();
 
   constructor(private expiry: IdleExpiry, @Optional() keepaliveSvc?: KeepaliveSvc) {
     if (keepaliveSvc) {

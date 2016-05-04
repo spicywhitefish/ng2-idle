@@ -1,5 +1,5 @@
-import {it, inject, injectAsync, beforeEach, beforeEachProviders, fakeAsync, tick} from 'angular2/testing';
-import {provide} from 'angular2/core';
+import {it, inject, injectAsync, beforeEach, beforeEachProviders, fakeAsync, tick} from '@angular/core/testing';
+import {provide} from '@angular/core';
 
 import {Idle, AutoResume} from './idle';
 import {KeepaliveSvc} from './keepalivesvc';

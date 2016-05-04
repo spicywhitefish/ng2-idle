@@ -1,4 +1,4 @@
-import {it, injectAsync, fakeAsync, tick} from 'angular2/testing';
+import {it, injectAsync, fakeAsync, tick} from '@angular/core/testing';
 import {EventTargetInterruptSource} from './eventtargetinterruptsource';
 
 export function main() {

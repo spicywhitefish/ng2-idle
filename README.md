@@ -78,9 +78,9 @@ As an example: let's assume we have an application with this structure (omitting
 In `src/main.ts`, we bootstrap the application. It might look something like this:
 
 ```
-import {provide} from 'angular2/core';
-import {bootstrap} from 'angular2/platform/browser';
-import {HTTP_PROVIDERS} from 'angular2/http'; // You'll need to import HTTP providers
+import {provide} from '@angular/core';
+import {bootstrap} from '@angular/platform-browser';
+import {HTTP_PROVIDERS} from '@angular/http'; // You'll need to import HTTP providers
 import {IDLE_PROVIDERS} from 'ng2-idle/core'; // Import idle providers
 
 // If you're using keepalive and expiry modules, you'll need to import those providers, too.
@@ -98,7 +98,7 @@ bootstrap(AppCmp, [
 In `src/app/components/app.ts`, we inject `Idle` and configure it for our application. This single instance of `Idle` will be used in all dependency hierarchies below the root (unless you choose to override them).
 
 ```
-import {Component, ViewEncapsulation} from 'angular2/core';
+import {Component, ViewEncapsulation} from '@angular/core';
 import {
   RouteConfig,
   ROUTER_DIRECTIVES
@@ -157,12 +157,6 @@ export class AppCmp {
 
 This repository uses TypeScript (with Typings as the definition manager), Gulp, tslint, eslint (for JS files used in Gulp tasks), Karma, and Jasmine.
 
-To run Gulp tasks, you'll need to install the `gulp-cli`.
-
-```
- npm install -g gulp-cli
-```
-
 Once you have cloned the repository, install all packages.
 
 ```
@@ -172,31 +166,31 @@ Once you have cloned the repository, install all packages.
 You can now build and run tests.
 
 ```
- gulp test
+ npm run gulp test
 ```
 
 If you want to continuously build and test, first execute this task in a _separate window_:
 
 ```
- gulp build:dev:watch
+ npm run gulp build:dev:watch
 ```
 
 Then run this task:
 
 ```
- gulp test:watch
+ npm run gulp test:watch
 ```
 
 If you wish to prepare a branch for a pull request, run this command and fix any errors:
 
 ```
- gulp build
+ npm run gulp build
 ```
 
 You can use `clang-format` to automatically correct most style errors and then commit the results:
 
 ```
- gulp clang:format
+ npm run gulp clang:format
 ```
 
 ## Contributing

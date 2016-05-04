@@ -1,4 +1,4 @@
-import {it, injectAsync} from 'angular2/testing';
+import {it, injectAsync} from '@angular/core/testing';
 import {WindowInterruptSource} from './windowinterruptsource';
 
 export function main() {
